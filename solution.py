@@ -44,5 +44,12 @@ def get_sequence(fragments):
 
     return get_sequence(search_fragments | set([(left_fragment, -1)]))
 
+def check_output(fragments, output):
+    for fragment in fragments:
+        if output.find(fragment[0]) == -1:
+            return False
+    return True
+
+
 fragments = load_fragments_from_file(sys.argv[1])
 print get_sequence(fragments)
