@@ -10,11 +10,11 @@ I started playing with the problem in python and finished the python solution fi
 Since I used essentially recursive solution with immutable sets (I am creating new set with every recursion call) I decided to implement it with Scala, cause Scala sets are immutable and should have efficient memory sharing. Also it was fun converting file with fragments into sequence of pairs in functional style
 
 ## How to run 
-Python solution is easy to run: solution.py <file with fragments>
+Python solution is easy to run: solution.py filewithfragments
 
 Main scala file is /scala/src/main/scala/Main.scala
 Scala solution should be compiled with sbt: sbt package
-then run something like that scala -cp  target/scala-2.10/classes/ Main  <file with fragments>
+then run something like that scala -cp  target/scala-2.10/classes/ Main  filewithfragments
 
 ## Further optimizaions
 Solution has complexity O(n^2*m) where n is number of fragments and m - potential length of fragment. 
